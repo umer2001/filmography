@@ -1,0 +1,48 @@
+{
+  "name": "filmography",
+  "version": "1.0.0",
+  "description": "Film and video production methodology: brainstorming, screenwriting, directing, cinematography, lighting, and production coordination.",
+  "author": {
+    "name": "Umer Khan",
+    "email": "umer@example.com",
+    "url": "https://github.com/umer2001"
+  },
+  "homepage": "https://github.com/umer2001/filmography",
+  "repository": "https://github.com/umer2001/filmography",
+  "license": "MIT",
+  "keywords": [
+    "filmmaking",
+    "production",
+    "screenwriting",
+    "cinematography",
+    "directing",
+    "video",
+    "skills",
+    "production-coordination",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Filmography",
+    "shortDescription": "Screenwriting, directing, cinematography, lighting, and production coordination for film creation",
+    "longDescription": "Use Filmography to guide production work through brainstorming, story development, production planning, cinematography and lighting design, department coordination, and post-production workflows.",
+    "developerName": "Umer Khan",
+    "category": "Creative",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "I've got a short film concept I'd like to develop.",
+      "Let's plan out a music video production.",
+      "I need help coordinating my film crew."
+    ],
+    "websiteURL": "https://github.com/umer2001/filmography",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#DC2626",
+    "logo": "./assets/filmography-logo.png",
+    "screenshots": []
+  }
+}

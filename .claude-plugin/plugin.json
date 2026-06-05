@@ -1,0 +1,23 @@
+{
+  "name": "filmography",
+  "description": "Film and video production skills framework: screenwriting, directing, cinematography, lighting, and production coordination",
+  "version": "1.0.0",
+  "author": {
+    "name": "Umer Khan",
+    "email": "umer@example.com"
+  },
+  "homepage": "https://github.com/umer2001/filmography",
+  "repository": "https://github.com/umer2001/filmography",
+  "license": "MIT",
+  "keywords": [
+    "filmmaking",
+    "production",
+    "screenwriting",
+    "cinematography",
+    "directing",
+    "video",
+    "skills",
+    "collaboration",
+    "workflow"
+  ]
+}

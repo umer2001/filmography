@@ -1,6 +1,6 @@
 {
   "name": "filmography",
-  "description": "Film and video production skills framework: screenwriting, directing, cinematography, lighting, and production coordination",
+  "description": "AI-native film and video workflow plugin: project-level pre-production, screenplay gates, scene packaging, shot generation, sound design, reference planning, and Veo-aware prompt generation",
   "version": "1.0.0",
   "author": {
     "name": "Umer Khan",
@@ -17,7 +17,10 @@
     "directing",
     "video",
     "skills",
-    "collaboration",
-    "workflow"
+    "workflow",
+    "veo",
+    "google-flow",
+    "nano-banana",
+    "collaboration"
   ]
 }

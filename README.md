@@ -1,55 +1,104 @@
 # Filmography
 
-Filmography is a complete film and video production methodology for your coding agents, adapted from the Superpowers framework. It provides a set of composable skills and initial instructions that help agents coordinate all aspects of production—from screenwriting and directing to cinematography, lighting, and post-production.
+Filmography is an AI-native film and video production workflow plugin, adapted from the structure of Superpowers. It helps agents turn story ideas into screenplay-ready project foundations and then into scene-ready generation materials through reusable skills, role-specific agents, and explicit handoffs between creative stages.
 
-## What is Filmography?
+## What Filmography Focuses On
 
-Filmography is an agentic skills framework designed for creative collaboration in film production. Instead of jumping straight into shooting, it steps back and asks the right questions first:
+The current v1 structure is designed for software-based production workflows that use tools such as Google Flow, Veo, and Nano Banana. Instead of planning physical shoots, Filmography focuses on:
 
-1. **Brainstorming** - Refine the creative vision through dialogue
-2. **Story Development** - Build screenplay and narrative structure
-3. **Production Planning** - Create shot lists, schedules, and budgets
-4. **Directing** - Coordinate actors, camera movement, and scene flow
-5. **Cinematography** - Plan camera angles, lighting, composition
-6. **Gaffer Work** - Technical lighting specifications
-7. **Production Coordination** - Manage crew, locations, equipment
-8. **Post-Production** - Editing, color grading, sound design
+1. **Project-level pre-production** - Build story foundations, screenplay, project bibles, and continuity rules
+2. **Scene packaging** - Turn one approved scene into a handoff-ready scene package
+3. **Shot generation** - Turn scenes into continuity-aware cinematic coverage
+4. **Reference planning** - Decide what character, style, or start/end references are needed
+5. **Sound design** - Define dialogue treatment, ambience, and sonic cues
+6. **Prompt generation** - Create Veo-aware, human-readable prompt sheets for one scene at a time
+7. **Post-production** - Guide editing, continuity repair, and final delivery
 
-## How it Works
+## Current V1 Workflows
 
-The framework provides **Skills** (best practice guides for each production role) and **Agents** (specialized agents for Screenwriter, Director, Cinematographer, Gaffer, Producer, and Post-Production Lead).
+Filmography now has two main workflows:
 
-Agents use these skills to:
-- Ask clarifying questions about creative vision
-- Propose multiple approaches with trade-offs
-- Create detailed production plans
-- Coordinate between departments
-- Verify quality and consistency
-- Make data-driven decisions
+### 1. Project-Level Workflow
 
-## Core Skills
+1. `pre-production-planning`
+2. `screenwriter` develops the full story and master screenplay
+3. screenplay approval gate
+4. auto-generate `docs/story/scenes/<scene-id>.md`
+5. propose screenplay breakdown artifacts
+6. `script-breakdown-reviewer` checks coverage and priority
+7. human approval
+8. generate `required` derived docs first
+9. optionally expand into `useful` docs
+10. lock the project foundation for scene work
 
-### Creative Development
-- **brainstorming** - Refine creative concepts through collaborative dialogue
-- **screenwriting** - Story structure, character development, dialogue
-- **story-development** - Narrative arc, pacing, emotional beats
+### 2. Scene Workflow
 
-### Production Departments
-- **directing** - Shot planning, actor direction, scene coordination
-- **cinematography** - Camera movement, composition, visual language
-- **gaffer-work** - Lighting design and technical specifications
-- **production-planning** - Scheduling, budgeting, logistics
-- **locations-scouting** - Location assessment and documentation
+1. choose `docs/story/scenes/<scene-id>.md`
+2. `scene-packaging` creates a short interpretation preview
+3. preview approval gate
+4. `scene-package.md`
+5. `shot-generation`
+6. `reference-planning`
+7. `sound-design`
+8. `prompt-generation`
 
-### Execution & Review
-- **production-coordination** - Department coordination and scheduling
-- **requesting-production-review** - Quality checks across departments
-- **post-production** - Editing, color grading, sound design
-- **systematic-problem-solving** - Troubleshooting production issues
+The prompt-generation stage is intentionally **Veo-aware**. It can choose between:
+- a single prompt for a shot
+- multiple prompts stitched into one seamless editorial shot
+- timestamped multi-beat prompts for short sequences
 
-### Meta
-- **writing-skills** - Create new production skills
-- **using-filmography** - Introduction to the framework
+## Repo Structure
+
+- `skills/` contains workflow skills
+- `agents/` contains role-specific agent briefs
+- `templates/` contains reusable human-readable documents
+- `docs/contracts/` defines handoffs between workflow stages
+- `docs/examples/` shows an end-to-end example scene workflow
+- `help/superpowers/` is the local reference copy of the upstream framework this project is adapting
+
+## Core V1 Skills
+
+- `using-filmography` - Entry skill that routes work into the right workflow
+- `pre-production-planning` - Create project foundations and screenplay gates before scene work
+- `scene-packaging` - Preview and package one screenplay scene for downstream planning
+- `shot-generation` - Build continuity-aware shot plans from scene packages
+- `reference-planning` - Decide which reference assets are required
+- `sound-design` - Define sonic intent and dialogue/audio requirements
+- `prompt-generation` - Write Veo-aware prompt sheets from approved scene inputs
+- `script-breakdown-reviewer` - Review screenplay-derived doc proposals for coverage and priority
+- `writing-skills` - Create or refine Filmography skills with explicit handoffs
+
+## Agents
+
+- `screenwriter` - Produces story-ready screenplay artifacts
+- `director` - Owns scene interpretation and dramatic clarity
+- `cinematographer` - Owns framing, movement, and visual continuity
+- `producer` - Keeps the workflow scoped, coordinated, and handoff-safe
+- `script-breakdown-reviewer` - Checks screenplay-derived doc coverage and priority
+- `post-production-lead` - Oversees editing, continuity repair, and final finishing
+
+## Templates And Contracts
+
+Important handoff artifacts in this repo include:
+
+- `templates/screenplay.md`
+- `templates/story-scene.md`
+- `templates/scene-interpretation-preview.md`
+- `templates/scene-package.md`
+- `templates/shot-plan.md`
+- `templates/reference-plan.md`
+- `templates/sound-design-plan.md`
+- `templates/veo-prompt-sheet.md`
+- `templates/extraction-proposal.md`
+- `templates/project-continuity-anchors.md`
+- `templates/character-profile.md`
+- `templates/character-continuity.md`
+- `templates/environment-description.md`
+- `templates/environment-continuity.md`
+- `docs/contracts/shot-generation-input.md`
+- `docs/contracts/reference-planning-input.md`
+- `docs/contracts/sound-design-input.md`
+- `docs/contracts/prompt-generation-input.md`
 
 ## Installation
 
@@ -76,42 +125,55 @@ plugin install filmography@filmography-marketplace
 
 ## Basic Workflow
 
-1. **Brainstorming** - Explore creative vision, constraints, and success criteria
-2. **Story Development** - Write screenplay, develop characters, establish narrative
-3. **Production Planning** - Create shot lists, shot schedules, production timeline
-4. **Department Planning** - Each department (Camera, Lighting, Sound, Wardrobe) creates specifications
-5. **Production Coordination** - Dispatch agents for each department, coordinate schedules
-6. **On-Set Execution** - Directors, cinematographers, gaffers execute their plans
-7. **Production Review** - Verify work quality, consistency, and plan adherence
-8. **Post-Production** - Editing, color correction, sound design, final delivery
+### Project-Level
+
+1. **Concept intake and clarification** - Start from narration, story concept, synopsis, tone, or references
+2. **Story foundation** - Build the logline, premise, synopsis, and early project foundation
+3. **Full screenplay** - Write the entire screenplay as a required gate before scene workflow
+4. **Screenplay approval** - Lock the story before downstream doc generation
+5. **Per-scene screenplay files** - Auto-generate `docs/story/scenes/<scene-id>.md`
+6. **Breakdown proposal and review** - Propose characters, environments, important props, relationships, factions, and motifs; review for coverage and doc priority
+7. **Derived docs generation** - Create `required` docs first, then optionally expand into `useful` docs
+8. **Locked project foundation** - Finalize continuity anchors and downstream project docs
+
+### Scene-Level
+
+1. **Scene selection** - Pick an approved per-scene screenplay file
+2. **Scene interpretation preview** - Preview the intended downstream emphasis before package creation
+3. **Scene packaging** - Create the approved `scene-package.md`
+4. **Shot generation**
+5. **Reference planning**
+6. **Sound design**
+7. **Prompt generation**
 
 ## Philosophy
 
 - **Systematic over ad-hoc** - Process over guessing
 - **Collaboration over siloing** - Clear communication between departments
-- **Specification before execution** - Planning before production
+- **Specification before execution** - Planning before generation
 - **Evidence over claims** - Review and verify before approving
 - **Incremental validation** - Get approval after each phase
 
 ## The Production Agents
 
 ### Screenwriter
-Focuses on story structure, character development, dialogue, and narrative pacing. Ensures the script is complete, coherent, and ready for production.
+Focuses on story structure, character development, dialogue, and narrative pacing. Produces the full screenplay and the story artifacts that scene-level workflows inherit.
 
 ### Director
-Coordinates the overall creative vision. Plans shots, directs actors, manages scene flow, and ensures narrative consistency. Acts as the central creative authority.
+Coordinates the overall creative vision for a scene. Plans dramatic coverage, performance emphasis, and scene flow while protecting story intent.
 
 ### Cinematographer
-Plans camera movement, composition, visual language, and technical camera specifications. Works with the Director to realize the visual vision.
-
-### Gaffer (Chief Lighting Technician)
-Designs lighting setups, specifies equipment, and creates technical lighting documentation. Ensures lighting supports the visual language and mood.
+Plans camera movement, composition, visual language, and lighting feel. Works with the Director to turn scene intent into usable shot design.
 
 ### Producer
-Manages scheduling, budgeting, logistics, and resources. Coordinates between departments and solves production problems.
+Coordinates the workflow, scope, handoffs, and approval flow across both project-level and scene-level departments in an AI-native production pipeline.
 
 ### Post-Production Lead
 Oversees editing, color grading, sound design, and final delivery. Ensures post-production work aligns with the original creative vision.
+
+## Status
+
+This repository now contains the v1 workflow structure, templates, contracts, and worked examples for both project-level and scene-level workflows. It is still early-stage and should be treated as a framework under active validation rather than a fully battle-tested plugin.
 
 ## Contributing
 

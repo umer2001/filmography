@@ -1,7 +1,7 @@
 {
   "name": "filmography",
   "version": "1.0.0",
-  "description": "Film and video production methodology: brainstorming, screenwriting, directing, cinematography, lighting, and production coordination.",
+  "description": "AI-native film and video production workflow: project-level pre-production, screenplay gates, scene packaging, shot generation, reference planning, sound design, and Veo-aware prompt generation.",
   "author": {
     "name": "Umer Khan",
     "email": "umer@example.com",
@@ -18,14 +18,17 @@
     "directing",
     "video",
     "skills",
-    "production-coordination",
-    "workflow"
+    "workflow",
+    "veo",
+    "google-flow",
+    "nano-banana",
+    "prompt-generation"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Filmography",
-    "shortDescription": "Screenwriting, directing, cinematography, lighting, and production coordination for film creation",
-    "longDescription": "Use Filmography to guide production work through brainstorming, story development, production planning, cinematography and lighting design, department coordination, and post-production workflows.",
+    "shortDescription": "AI-native scene planning and Veo-aware prompt workflows for film and video creation",
+    "longDescription": "Use Filmography to guide AI-native production work through pre-production planning, screenwriter scene packages, continuity-aware shot generation, reference planning, sound design, and Veo-aware prompt creation.",
     "developerName": "Umer Khan",
     "category": "Creative",
     "capabilities": [
@@ -34,15 +37,14 @@
       "Write"
     ],
     "defaultPrompt": [
-      "I've got a short film concept I'd like to develop.",
-      "Let's plan out a music video production.",
-      "I need help coordinating my film crew."
+      "I've got a short film idea and need a project foundation and screenplay workflow.",
+      "Turn this scene into a continuity-aware shot plan.",
+      "Create a Veo prompt sheet for this scene."
     ],
     "websiteURL": "https://github.com/umer2001/filmography",
     "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
     "brandColor": "#DC2626",
-    "logo": "./assets/filmography-logo.png",
     "screenshots": []
   }
 }

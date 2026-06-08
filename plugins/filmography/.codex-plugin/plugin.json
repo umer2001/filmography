@@ -1,0 +1,18 @@
+{
+  "name": "filmography",
+  "version": "0.1.0",
+  "description": "Filmography plugin",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Filmography",
+    "shortDescription": "Use Filmography in Codex.",
+    "longDescription": "Filmography adds a local Codex plugin scaffold.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Help me use Filmography."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "filmography",
+  "displayName": "Filmography",
+  "description": "AI-native film and video workflow plugin: project-level pre-production, screenplay gates, scene packaging, shot generation, sound design, reference planning, and Veo-aware prompt generation",
+  "version": "1.0.0",
+  "author": {
+    "name": "Umer Khan",
+    "email": "umer@example.com"
+  },
+  "homepage": "https://github.com/umer2001/filmography",
+  "repository": "https://github.com/umer2001/filmography",
+  "license": "MIT",
+  "keywords": [
+    "filmmaking",
+    "production",
+    "screenwriting",
+    "cinematography",
+    "video",
+    "skills",
+    "workflow",
+    "veo",
+    "google-flow",
+    "nano-banana"
+  ],
+  "skills": "./skills/",
+  "agents": "./agents/"
+}

@@ -30,16 +30,20 @@ The project-level workflow should move through these phases:
 2. story foundation
 3. early project foundation with a lightweight bible skeleton
 4. full screenplay as a required gate
-5. screenplay approval
-6. per-scene screenplay file generation
-7. extraction proposal
-8. reviewed and approved derived-doc generation
-9. locked project foundation
+5. blocking screenplay-reviewer pass
+6. screenwriter revision and re-review when needed
+7. human screenplay approval
+8. per-scene screenplay file generation
+9. extraction proposal
+10. reviewed and approved derived-doc generation
+11. locked project foundation
 
 ## Hard Gates
 
 - Do not start scene-level shot or prompt work until the project foundation and full screenplay exist.
 - Treat the full screenplay as a required gate before any `scene-package.md` work.
+- Do not send the screenplay to human approval until `screenplay-reviewer` has produced a review report, unless the human explicitly invokes an override.
+- If `screenplay-reviewer` returns `No` or `With revisions`, route the report back to the Screenwriter and re-review after revisions.
 - After screenplay approval, generate `docs/story/scenes/<scene-id>.md` automatically before the extraction proposal.
 - Generate only `required` derived docs first; ask before expanding into `useful` docs.
 - Exclude physical-production budgeting, location logistics, and crew scheduling unless the user explicitly asks for them.

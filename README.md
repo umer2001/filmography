@@ -7,12 +7,13 @@ Filmography is an AI-native film and video production workflow plugin, adapted f
 The current v1 structure is designed for software-based production workflows that use tools such as Google Flow, Veo, and Nano Banana. Instead of planning physical shoots, Filmography focuses on:
 
 1. **Project-level pre-production** - Build story foundations, screenplay, project bibles, and continuity rules
-2. **Scene packaging** - Turn one approved scene into a handoff-ready scene package
-3. **Shot generation** - Turn scenes into continuity-aware cinematic coverage
-4. **Reference planning** - Decide what character, style, or start/end references are needed
-5. **Sound design** - Define dialogue treatment, ambience, and sonic cues
-6. **Prompt generation** - Create Veo-aware, human-readable prompt sheets for one scene at a time
-7. **Post-production** - Guide editing, continuity repair, and final delivery
+2. **Screenplay review** - Audit the full screenplay before human approval
+3. **Scene packaging** - Turn one approved scene into a handoff-ready scene package
+4. **Shot generation** - Turn scenes into continuity-aware cinematic coverage
+5. **Reference planning** - Decide what character, style, or start/end references are needed
+6. **Sound design** - Define dialogue treatment, ambience, and sonic cues
+7. **Prompt generation** - Create Veo-aware, human-readable prompt sheets for one scene at a time
+8. **Post-production** - Guide editing, continuity repair, and final delivery
 
 ## Current V1 Workflows
 
@@ -22,14 +23,16 @@ Filmography now has two main workflows:
 
 1. `pre-production-planning`
 2. `screenwriter` develops the full story and master screenplay
-3. screenplay approval gate
-4. auto-generate `docs/story/scenes/<scene-id>.md`
-5. propose screenplay breakdown artifacts
-6. `script-breakdown-reviewer` checks coverage and priority
-7. human approval
-8. generate `required` derived docs first
-9. optionally expand into `useful` docs
-10. lock the project foundation for scene work
+3. `screenplay-reviewer` performs a blocking story-quality review
+4. `screenwriter` revises if the review returns blocking issues
+5. human screenplay approval gate
+6. auto-generate `docs/story/scenes/<scene-id>.md`
+7. propose screenplay breakdown artifacts
+8. `script-breakdown-reviewer` checks coverage and priority
+9. human breakdown approval
+10. generate `required` derived docs first
+11. optionally expand into `useful` docs
+12. lock the project foundation for scene work
 
 ### 2. Scene Workflow
 
@@ -60,6 +63,7 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 
 - `using-filmography` - Entry skill that routes work into the right workflow
 - `pre-production-planning` - Create project foundations and screenplay gates before scene work
+- `screenplay-reviewer` - Run a blocking screenplay quality review before human approval, or manually when requested
 - `scene-packaging` - Preview and package one screenplay scene for downstream planning
 - `shot-generation` - Build continuity-aware shot plans from scene packages
 - `reference-planning` - Decide which reference assets are required
@@ -71,6 +75,7 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 ## Agents
 
 - `screenwriter` - Produces story-ready screenplay artifacts
+- `screenplay-reviewer` - Audits full screenplays for structure, hook, retention, visual storytelling, and emotional pacing
 - `director` - Owns scene interpretation and dramatic clarity
 - `cinematographer` - Owns framing, movement, and visual continuity
 - `producer` - Keeps the workflow scoped, coordinated, and handoff-safe
@@ -82,6 +87,7 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 Important handoff artifacts in this repo include:
 
 - `templates/screenplay.md`
+- `templates/screenplay-review-report.md`
 - `templates/story-scene.md`
 - `templates/scene-interpretation-preview.md`
 - `templates/scene-package.md`
@@ -99,6 +105,10 @@ Important handoff artifacts in this repo include:
 - `docs/contracts/reference-planning-input.md`
 - `docs/contracts/sound-design-input.md`
 - `docs/contracts/prompt-generation-input.md`
+
+Example screenplay-review output:
+
+- `docs/examples/example-screenplay-review-report.md`
 
 ## Installation
 
@@ -130,11 +140,13 @@ plugin install filmography@filmography-marketplace
 1. **Concept intake and clarification** - Start from narration, story concept, synopsis, tone, or references
 2. **Story foundation** - Build the logline, premise, synopsis, and early project foundation
 3. **Full screenplay** - Write the entire screenplay as a required gate before scene workflow
-4. **Screenplay approval** - Lock the story before downstream doc generation
-5. **Per-scene screenplay files** - Auto-generate `docs/story/scenes/<scene-id>.md`
-6. **Breakdown proposal and review** - Propose characters, environments, important props, relationships, factions, and motifs; review for coverage and doc priority
-7. **Derived docs generation** - Create `required` docs first, then optionally expand into `useful` docs
-8. **Locked project foundation** - Finalize continuity anchors and downstream project docs
+4. **Screenplay review** - Run `screenplay-reviewer` as a blocking story-quality gate before human approval
+5. **Screenwriter revisions** - Resolve blocking review notes and re-review when needed
+6. **Screenplay approval** - Lock the story before downstream doc generation
+7. **Per-scene screenplay files** - Auto-generate `docs/story/scenes/<scene-id>.md`
+8. **Breakdown proposal and review** - Propose characters, environments, important props, relationships, factions, and motifs; review for coverage and doc priority
+9. **Derived docs generation** - Create `required` docs first, then optionally expand into `useful` docs
+10. **Locked project foundation** - Finalize continuity anchors and downstream project docs
 
 ### Scene-Level
 
@@ -158,6 +170,9 @@ plugin install filmography@filmography-marketplace
 
 ### Screenwriter
 Focuses on story structure, character development, dialogue, and narrative pacing. Produces the full screenplay and the story artifacts that scene-level workflows inherit.
+
+### Screenplay Reviewer
+Audits the full screenplay before human approval. It checks transformation, structure, hook strategy, retention loops, visual storytelling, and emotional pacing, then returns actionable directives to the Screenwriter. It can also be invoked manually when a human wants an additional screenplay review pass.
 
 ### Director
 Coordinates the overall creative vision for a scene. Plans dramatic coverage, performance emphasis, and scene flow while protecting story intent.

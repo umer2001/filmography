@@ -12,6 +12,8 @@ Filmography is a workflow plugin for AI-native film and video production. It hel
 ## Routing Rules
 
 - If the project foundation or screenplay does not exist, use `pre-production-planning`.
+- If the full screenplay exists but has not passed review, use `screenplay-reviewer` before human screenplay approval.
+- If the human explicitly asks for screenplay review, use `screenplay-reviewer` even outside the automatic approval flow.
 - If the screenplay exists but per-scene files do not, derive `docs/story/scenes/<scene-id>.md` before any scene workflow.
 - If screenplay-derived project docs are being proposed, use `script-breakdown-reviewer` before generating them.
 - If a scene exists but is not packaged for downstream work, use `scene-packaging`.
@@ -22,7 +24,8 @@ Filmography is a workflow plugin for AI-native film and video production. It hel
 ## Hard Gates
 
 - Work one scene at a time for v1.
-- Do not begin scene workflow until the full screenplay exists and is approved.
+- Do not begin scene workflow until the full screenplay exists, has passed screenplay-reviewer, and is approved by the human.
+- Do not send the screenplay to human approval before screenplay-reviewer has produced a verdict, unless the human explicitly overrides the gate.
 - Do not generate derived project docs from the screenplay without a reviewed extraction proposal.
 - Do not create `scene-package.md` until a scene interpretation preview has been approved.
 - Do not skip directly to prompt-generation without a scene package and shot plan.
@@ -33,6 +36,7 @@ Filmography is a workflow plugin for AI-native film and video production. It hel
 - Project foundation: `docs/project/project-foundation.md`
 - Story foundation: `docs/story/foundation.md`
 - Master screenplay: `docs/story/screenplay.md`
+- Screenplay review report: `docs/story/screenplay-review-report.md`
 - Per-scene screenplay: `docs/story/scenes/<scene-id>.md`
 - Project continuity: `docs/continuity/anchors.md`
 - Character docs: `docs/characters/<character-slug>/profile.md`

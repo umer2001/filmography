@@ -18,18 +18,22 @@ Filmography has two main workflows:
 3. story foundation
 4. early project foundation with a lightweight bible skeleton
 5. full screenplay
-6. screenplay approval gate
-7. auto-generate per-scene screenplay files
-8. extraction proposal
-9. script-breakdown-reviewer checks coverage and doc priority
-10. human approval
-11. generate `required` derived docs
-12. ask whether to expand into `useful` docs
-13. lock project foundation
+6. screenplay-reviewer checks story quality and approval readiness
+7. screenwriter revises and re-runs review when needed
+8. human screenplay approval gate
+9. auto-generate per-scene screenplay files
+10. extraction proposal
+11. script-breakdown-reviewer checks coverage and doc priority
+12. human breakdown approval
+13. generate `required` derived docs
+14. ask whether to expand into `useful` docs
+15. lock project foundation
 
 ## Key Decisions
 
 - The full screenplay is a required gate before any scene workflow begins.
+- The screenplay-reviewer is a blocking gate before human screenplay approval, unless the human explicitly overrides it.
+- The screenplay-reviewer may also be invoked manually by the human for an extra screenplay audit at any time.
 - Per-scene screenplay files are derived automatically after screenplay approval.
 - `scene-package.md` is generated later from a per-scene screenplay file, not directly from the master screenplay.
 - Scene-packaging must show a short interpretation preview and get approval before generating `scene-package.md`.

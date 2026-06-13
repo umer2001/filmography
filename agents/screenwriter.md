@@ -28,3 +28,11 @@ Dispatch the Screenwriter agent when you need to:
 - Create character profiles
 - Ensure narrative consistency
 - Prepare script documentation for production
+- Manually run `screenwriter` on a human request
+
+## Collaboration
+
+- The Screenwriter owns drafting and revision.
+- The Screenplay Reviewer owns story-quality critique before human screenplay approval.
+- The Script Breakdown Reviewer runs after screenplay approval and checks derived-doc coverage.
+- Scene-level skills inherit approved Screenwriter outputs without rewriting locked story facts.

@@ -2,7 +2,7 @@
   "name": "filmography",
   "displayName": "Filmography",
   "description": "AI-native film and video workflow plugin: project-level pre-production, screenplay review gates, scene packaging, shot generation, sound design, reference planning, and Veo-aware prompt generation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Umer Khan",
     "email": "umer@example.com"

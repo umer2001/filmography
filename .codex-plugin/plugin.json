@@ -1,6 +1,6 @@
 {
   "name": "filmography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AI-native film and video production workflow: project-level pre-production, screenplay review gates, scene packaging, shot generation, reference planning, sound design, and Veo-aware prompt generation.",
   "author": {
     "name": "Umer Khan",
@@ -38,6 +38,7 @@
     ],
     "defaultPrompt": [
       "I've got a short film idea and need a project foundation and screenplay workflow.",
+      "Run screenwriter to draft or revise the current screenplay.",
       "Run screenplay-reviewer on the current screenplay before human approval.",
       "Turn this scene into a continuity-aware shot plan.",
       "Create a Veo prompt sheet for this scene."

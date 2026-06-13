@@ -12,6 +12,7 @@ Filmography is a workflow plugin for AI-native film and video production. It hel
 ## Routing Rules
 
 - If the project foundation or screenplay does not exist, use `pre-production-planning`.
+- If the human explicitly asks for story development, screenplay drafting, screenplay revision, or `screenwriter`, use `screenwriter`.
 - If the full screenplay exists but has not passed review, use `screenplay-reviewer` before human screenplay approval.
 - If the human explicitly asks for screenplay review, use `screenplay-reviewer` even outside the automatic approval flow.
 - If the screenplay exists but per-scene files do not, derive `docs/story/scenes/<scene-id>.md` before any scene workflow.

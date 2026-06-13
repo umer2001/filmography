@@ -32,6 +32,7 @@ Filmography has two main workflows:
 ## Key Decisions
 
 - The full screenplay is a required gate before any scene workflow begins.
+- The screenwriter may be invoked manually by the human for story development, screenplay drafting, screenplay revision, or approved per-scene screenplay file generation.
 - The screenplay-reviewer is a blocking gate before human screenplay approval, unless the human explicitly overrides it.
 - The screenplay-reviewer may also be invoked manually by the human for an extra screenplay audit at any time.
 - Per-scene screenplay files are derived automatically after screenplay approval.

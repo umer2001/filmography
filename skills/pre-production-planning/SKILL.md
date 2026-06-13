@@ -42,6 +42,7 @@ The project-level workflow should move through these phases:
 
 - Do not start scene-level shot or prompt work until the project foundation and full screenplay exist.
 - Treat the full screenplay as a required gate before any `scene-package.md` work.
+- Use `screenwriter` when the human explicitly asks for story development, screenplay drafting, or screenplay revision.
 - Do not send the screenplay to human approval until `screenplay-reviewer` has produced a review report, unless the human explicitly invokes an override.
 - If `screenplay-reviewer` returns `No` or `With revisions`, route the report back to the Screenwriter and re-review after revisions.
 - After screenplay approval, generate `docs/story/scenes/<scene-id>.md` automatically before the extraction proposal.

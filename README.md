@@ -63,6 +63,7 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 
 - `using-filmography` - Entry skill that routes work into the right workflow
 - `pre-production-planning` - Create project foundations and screenplay gates before scene work
+- `screenwriter` - Draft or revise story foundations, master screenplays, and approved per-scene screenplay files; manually invokable by request
 - `screenplay-reviewer` - Run a blocking screenplay quality review before human approval, or manually when requested
 - `scene-packaging` - Preview and package one screenplay scene for downstream planning
 - `shot-generation` - Build continuity-aware shot plans from scene packages
@@ -169,7 +170,7 @@ plugin install filmography@filmography-marketplace
 ## The Production Agents
 
 ### Screenwriter
-Focuses on story structure, character development, dialogue, and narrative pacing. Produces the full screenplay and the story artifacts that scene-level workflows inherit.
+Focuses on story structure, character development, dialogue, and narrative pacing. Produces the full screenplay and the story artifacts that scene-level workflows inherit. It can also be invoked manually when a human asks to run `screenwriter`.
 
 ### Screenplay Reviewer
 Audits the full screenplay before human approval. It checks transformation, structure, hook strategy, retention loops, visual storytelling, and emotional pacing, then returns actionable directives to the Screenwriter. It can also be invoked manually when a human wants an additional screenplay review pass.

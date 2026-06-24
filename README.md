@@ -40,10 +40,12 @@ Filmography now has two main workflows:
 2. `scene-packaging` creates a short interpretation preview
 3. preview approval gate
 4. `scene-package.md`
-5. `shot-generation`
-6. `reference-planning`
-7. `sound-design`
-8. `prompt-generation`
+5. `director` clarifies dramatic, performance, wardrobe, and staging priorities when needed
+6. `cinematographer` translates Director priorities into visual execution when needed
+7. `shot-generation`
+8. `reference-planning`
+9. `sound-design`
+10. `prompt-generation`
 
 The prompt-generation stage is intentionally **Veo-aware**. It can choose between:
 - a single prompt for a shot
@@ -67,6 +69,8 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 - `screenplay-reviewer` - Run a blocking screenplay quality review before human approval, or manually when requested
 - `scene-packaging` - Preview and package one screenplay scene for downstream planning
 - `shot-generation` - Build continuity-aware shot plans from scene packages
+- `director` - Define scene intent, performance, wardrobe, staging, and dramatic priorities for downstream visual planning; manually invokable by request
+- `cinematographer` - Translate Director dramatic priorities into camera, lighting, composition, and continuity-safe visual execution; manually invokable by request
 - `reference-planning` - Decide which reference assets are required
 - `sound-design` - Define sonic intent and dialogue/audio requirements
 - `prompt-generation` - Write Veo-aware prompt sheets from approved scene inputs
@@ -77,7 +81,7 @@ The prompt-generation stage is intentionally **Veo-aware**. It can choose betwee
 
 - `screenwriter` - Produces story-ready screenplay artifacts
 - `screenplay-reviewer` - Audits full screenplays for structure, hook, retention, visual storytelling, and emotional pacing
-- `director` - Owns scene interpretation and dramatic clarity
+- `director` - Owns scene interpretation, emotional clarity, performance, wardrobe, staging, and dramatic priorities
 - `cinematographer` - Owns framing, movement, and visual continuity
 - `producer` - Keeps the workflow scoped, coordinated, and handoff-safe
 - `script-breakdown-reviewer` - Checks screenplay-derived doc coverage and priority
@@ -154,10 +158,12 @@ plugin install filmography@filmography-marketplace
 1. **Scene selection** - Pick an approved per-scene screenplay file
 2. **Scene interpretation preview** - Preview the intended downstream emphasis before package creation
 3. **Scene packaging** - Create the approved `scene-package.md`
-4. **Shot generation**
-5. **Reference planning**
-6. **Sound design**
-7. **Prompt generation**
+4. **Director collaboration** - Clarify dramatic intent, performance, wardrobe, and staging priorities when needed
+5. **Cinematographer collaboration** - Translate Director priorities into visual execution when needed
+6. **Shot generation**
+7. **Reference planning**
+8. **Sound design**
+9. **Prompt generation**
 
 ## Philosophy
 
@@ -176,10 +182,10 @@ Focuses on story structure, character development, dialogue, and narrative pacin
 Audits the full screenplay before human approval. It checks transformation, structure, hook strategy, retention loops, visual storytelling, and emotional pacing, then returns actionable directives to the Screenwriter. It can also be invoked manually when a human wants an additional screenplay review pass.
 
 ### Director
-Coordinates the overall creative vision for a scene. Plans dramatic coverage, performance emphasis, and scene flow while protecting story intent.
+Coordinates the overall creative vision for a scene. Plans dramatic coverage, performance emphasis, wardrobe direction, staging, blocking, and scene flow while protecting story intent. Defines emotional priorities for the Cinematographer before visual execution is planned and can be invoked manually when a human asks to run `director`.
 
 ### Cinematographer
-Plans camera movement, composition, visual language, and lighting feel. Works with the Director to turn scene intent into usable shot design.
+Plans camera movement, composition, visual language, lighting feel, wardrobe-aware framing, and visual continuity. Works with the Director to turn dramatic intent into usable, AI-generation-safe shot design and can be invoked manually when a human asks to run `cinematographer`.
 
 ### Producer
 Coordinates the workflow, scope, handoffs, and approval flow across both project-level and scene-level departments in an AI-native production pipeline.

@@ -22,6 +22,7 @@ The shot plan should include:
 - scene coverage strategy
 - locked story beats
 - must-see and must-understand moments
+- director dramatic priorities when available
 - continuity anchors
 - shot-by-shot coverage
 - likely execution risks for prompt-generation
@@ -36,6 +37,8 @@ The shot plan should include:
 ## Collaboration
 
 Shot-generation should leave clear notes for:
+- `director` about unresolved dramatic emphasis or story-meaning questions
+- `cinematographer` about framing, movement, lens feel, lighting, and continuity-sensitive visual choices
 - `reference-planning` about where supporting assets are needed
 - `sound-design` about dialogue-sensitive or cue-driven moments
 - `prompt-generation` about which shots are likely single-prompt, stitched multi-prompt, or timestamped multi-beat candidates

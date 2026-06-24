@@ -22,6 +22,7 @@ Filmography v1 focuses on a single end-to-end scene workflow rather than a full 
 - The plugin is AI-native and software-based, not physical-shoot logistics oriented.
 - Work happens one scene at a time in v1.
 - `shot-generation` and `prompt-generation` are separate skills.
+- The Director and Cinematographer collaborate during scene interpretation and shot planning: Director owns dramatic intent, performance, wardrobe, staging, and audience experience; Cinematographer owns visual execution.
 - `reference-planning` and `sound-design` are separate collaborating skills.
 - `prompt-generation` is explicitly Veo-aware.
 - Veo prompt output is primarily human-readable prompt sheets, not machine-first JSON.

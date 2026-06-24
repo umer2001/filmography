@@ -1,6 +1,6 @@
 {
   "name": "filmography",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AI-native film and video production workflow: project-level pre-production, screenplay review gates, scene packaging, shot generation, reference planning, sound design, and Veo-aware prompt generation.",
   "author": {
     "name": "Umer Khan",

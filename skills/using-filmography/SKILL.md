@@ -18,6 +18,8 @@ Filmography is a workflow plugin for AI-native film and video production. It hel
 - If the screenplay exists but per-scene files do not, derive `docs/story/scenes/<scene-id>.md` before any scene workflow.
 - If screenplay-derived project docs are being proposed, use `script-breakdown-reviewer` before generating them.
 - If a scene exists but is not packaged for downstream work, use `scene-packaging`.
+- If the human explicitly asks for scene interpretation, performance direction, wardrobe direction, staging, dramatic priorities, or `director`, use `director`.
+- If the human explicitly asks for visual language, camera planning, lighting, composition, or `cinematographer`, use `cinematographer`.
 - If a scene package exists, use `shot-generation` before reference, sound, or prompt work.
 - Use `reference-planning` and `sound-design` after shot-generation.
 - Use `prompt-generation` last, after visual and sonic handoffs are ready.

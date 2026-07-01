@@ -11,6 +11,7 @@
 - Dialogue realism level: Naturalistic and restrained
 - Ambience style: Persistent but soft laundromat bed with rain outside
 - Sound world keywords: Fluorescent hum, rotating washer thrum, rain hiss, lonely bell, damp footsteps
+- Prompt style audio strategy: `cinematic-atmospheric` shots lean on rain, washer hum, and fluorescent buzz; `character-dialogue` shots preserve exact lines, pauses, and room tone; the `product-showcase` cassette insert needs crisp tactile contact.
 
 ## 3. Dialogue Priorities
 - Locked dialogue:
@@ -28,13 +29,13 @@
 
 ## 5. Cue Sheet
 
-| Cue ID | Beat / Shot | Sound Element | Purpose | Locked / Flexible | Timing Sensitivity | Prompt Note |
-|--------|-------------|---------------|---------|-------------------|--------------------|-------------|
-| C1 | S1 | Washer hum and rain | Establish lonely routine | Locked | Low | Mention as constant ambience |
-| C2 | S2 entry | Door bell | Marks interruption | Locked | High | Must land at the moment Ray enters |
-| C3 | S2 crossing | Wet footsteps on tile | Carries Ray's presence across the room | Flexible | Medium | Keep subtle, not exaggerated |
-| C4 | S4 | Cassette set onto metal counter | Makes the apology tactile | Locked | High | Needs crisp contact sound |
-| C5 | S5 | Room tone opens around final line | Gives emotional release space | Locked | High | Let ambience dip slightly around "Then stay." |
+| Cue ID | Beat / Shot | Prompt Style Family | Sound Element | Purpose | Locked / Recommended / Optional | Timing Sensitivity | Prompt Note |
+|--------|-------------|---------------------|---------------|---------|---------------------------------|--------------------|-------------|
+| C1 | S1 | `cinematic-atmospheric` | Washer hum and rain | Establish lonely routine | Locked | Low | Mention as constant ambience |
+| C2 | S2 entry | `character-dialogue` | Door bell | Marks interruption | Locked | High | Must land at the moment Ray enters |
+| C3 | S2 crossing | `character-dialogue` | Wet footsteps on tile | Carries Ray's presence across the room | Recommended | Medium | Keep subtle, not exaggerated |
+| C4 | S4 | `product-showcase` | Cassette set onto metal counter | Makes the apology tactile | Locked | High | Needs crisp contact sound |
+| C5 | S5 | `character-dialogue` | Room tone opens around final line | Gives emotional release space | Locked | High | Let ambience dip slightly around "Then stay." |
 
 ## 6. Continuity Notes
 - Repeating sounds that must stay stable: Washer bed, rain texture, fluorescent hum
@@ -43,3 +44,5 @@
 ## 7. Handoff Notes For Prompt Generation
 - Audio details that must appear in prompts: Washer hum, rain ambience, bell cue, cassette contact, breathing room around the final line
 - Audio details that can remain implicit: Distant traffic, subtle dryer clicks
+- Shots that should specify `No subtitles`: S2, S4, S5
+- Style-specific audio wording to reuse: "constant washer hum and soft rain on glass" for atmospheric shots; "naturalistic dialogue with room tone and no subtitles" for character-dialogue shots; "crisp cassette contact on metal" for the prop insert.

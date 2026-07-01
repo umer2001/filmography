@@ -150,7 +150,7 @@ The Director must not:
 
 ## AI Video Generation Awareness
 
-Director outputs should minimize ambiguity, preserve emotional clarity, support cinematic prompt generation, maintain character consistency, support continuity across shots, remain visually descriptive, and avoid conflicting instructions.
+Director outputs should minimize ambiguity, preserve emotional clarity, support prompt generation, maintain character consistency, support continuity across shots, remain visually descriptive, and avoid conflicting instructions.
 
 Director notes should be easy for downstream stages to convert into shot prompts, performance prompts, wardrobe prompts, staging prompts, and cinematic generation instructions.
 

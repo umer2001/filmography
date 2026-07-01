@@ -58,6 +58,7 @@ This contract defines how `shot-generation` must interpret a `Scene Package`.
 - Scene coverage strategy
 - Emotional coverage approach
 - Continuity-aware shot list
+- Scene and shot use-case classification for prompt style selection
 - Identification of must-cover beats
 - Identification of optional coverage
 - Notes for handoff to `reference-planning`
@@ -91,3 +92,25 @@ This means it should clearly label:
 - dialogue-sensitive moments
 - intended transitions
 - moments likely to require stitched multi-prompt execution later
+- likely prompt style family per shot
+
+## Prompt Style Classification Rule
+
+Shot-generation should classify every shot by primary prompt style family and optional secondary style family. The style should reflect the shot's use case, not only the project's genre.
+
+Use this controlled vocabulary:
+- `cinematic-atmospheric`
+- `character-dialogue`
+- `professional-business`
+- `product-showcase`
+- `culinary-food`
+- `landscape-environment`
+- `stylized-creative`
+- `sci-fi-fantasy`
+- `action-dynamic`
+- `real-estate-architecture`
+- `transformation-timelapse`
+- `performance-artistic`
+- `social-viral`
+
+The classification should help downstream stages decide which details need strongest control: camera, subject identity, action, setting, aesthetics, audio, timing, references, or negative constraints.

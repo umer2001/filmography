@@ -10,6 +10,8 @@
 - Scene objective on screen:
 - Dominant emotional rhythm:
 - Coverage philosophy:
+- Scene-level prompt style family:
+- Secondary prompt style families:
 - Must-show beats:
 - Can-imply beats:
 
@@ -22,11 +24,11 @@
 
 ## 4. Shot List
 
-| Shot ID | Beats Covered | Editorial Purpose | Framing | Camera / Motion | Key Action | Dialogue / Sound Sensitivity | Duration Intent | Continuity Notes | Prompt Mode Hint |
-|---------|---------------|-------------------|---------|-----------------|------------|------------------------------|----------------|------------------|------------------|
-| S1 |  |  |  |  |  |  |  |  |  |
-| S2 |  |  |  |  |  |  |  |  |  |
-| S3 |  |  |  |  |  |  |  |  |  |
+| Shot ID | Beats Covered | Editorial Purpose | Prompt Style Family | Formula Emphasis | Framing | Camera / Motion | Key Action | Dialogue / Sound Sensitivity | Duration Intent | Continuity Notes | Prompt Mode Hint |
+|---------|---------------|-------------------|---------------------|------------------|---------|-----------------|------------|------------------------------|----------------|------------------|------------------|
+| S1 |  |  |  | camera / subject / action / setting / aesthetics / audio |  |  |  |  |  |  |  |
+| S2 |  |  |  | camera / subject / action / setting / aesthetics / audio |  |  |  |  |  |  |  |
+| S3 |  |  |  | camera / subject / action / setting / aesthetics / audio |  |  |  |  |  |  |  |
 
 ## 5. Reference-Planning Notes
 - References required before prompt work:
@@ -42,4 +44,5 @@
 - Likely single-prompt shots:
 - Likely stitched multi-prompt shots:
 - Likely timestamped multi-beat sequences:
+- Prompt style selection notes:
 - Main prompt continuity risks:

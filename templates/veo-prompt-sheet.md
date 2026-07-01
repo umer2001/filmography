@@ -29,11 +29,20 @@
 ### Shot [ID] - [Label]
 - Execution mode:
 - Why this mode was chosen:
+- Prompt style family:
+- Why this prompt style was chosen:
 - Required references:
 - Continuity anchors for this shot:
 
 #### Prompt / Segment [ID]
 - Purpose:
+- Formula coverage:
+  - Shot composition:
+  - Subject details:
+  - Action:
+  - Setting / environment:
+  - Aesthetics / mood:
+  - Audio:
 - Base Veo prompt:
 - Audio guidance:
 - Negative constraints:

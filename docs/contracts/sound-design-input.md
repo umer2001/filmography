@@ -20,6 +20,7 @@ This contract defines how `sound-design` should interpret a scene package and sh
 - sonic emphasis per beat or shot
 - which cues need precise timing
 - which lines should dominate the mix versus sit inside the environment
+- how prompt style family changes the audio emphasis for each shot
 
 ## Forbidden Moves
 `sound-design` must not:
@@ -33,3 +34,9 @@ The output should make prompt-generation's job easier by clearly labeling:
 - dialogue-sensitive beats
 - ambience bed
 - cue timing risks
+- style-specific audio guidance
+- whether prompts should request no subtitles
+
+## Style-Aware Audio Rule
+
+Use the shot plan's prompt style family to decide what audio details must appear in prompts. Dialogue styles require exact lines, pauses, and clean speaker intent; atmospheric styles require ambience and restraint; product, food, action, transformation, and performance styles require tactile or timed cues; professional and social styles require speech clarity and low-noise directness.

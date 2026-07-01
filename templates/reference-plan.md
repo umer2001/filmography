@@ -10,14 +10,15 @@
 - Why references are needed for this scene:
 - Main continuity risks:
 - Reuse strategy across shots:
+- Prompt style families that affect reference needs:
 
 ## 3. Reference Asset List
 
-| Ref ID | Type | Required / Optional | Supports Shots | What Must Stay Consistent | Source or Creation Note | Approval Check |
-|--------|------|---------------------|----------------|---------------------------|-------------------------|----------------|
-| R1 |  |  |  |  |  |  |
-| R2 |  |  |  |  |  |  |
-| R3 |  |  |  |  |  |  |
+| Ref ID | Type | Required / Optional | Supports Shots | Supports Prompt Style | What Must Stay Consistent | Source or Creation Note | Approval Check |
+|--------|------|---------------------|----------------|-----------------------|---------------------------|-------------------------|----------------|
+| R1 |  |  |  |  |  |  |  |
+| R2 |  |  |  |  |  |  |  |
+| R3 |  |  |  |  |  |  |  |
 
 ## 4. Start / End Frame Needs
 - Shots that need explicit bridge frames:
@@ -27,3 +28,4 @@
 - Which references are mandatory to mention:
 - Which references are only visual guardrails:
 - Which references should be reused verbatim across prompts:
+- Style-specific reference instructions:

@@ -11,6 +11,7 @@
 - Dialogue realism level:
 - Ambience style:
 - Sound world keywords:
+- Prompt style audio strategy:
 
 ## 3. Dialogue Priorities
 - Locked dialogue:
@@ -25,11 +26,11 @@
 
 ## 5. Cue Sheet
 
-| Cue ID | Beat / Shot | Sound Element | Purpose | Locked / Flexible | Timing Sensitivity | Prompt Note |
-|--------|-------------|---------------|---------|-------------------|--------------------|-------------|
-| C1 |  |  |  |  |  |  |
-| C2 |  |  |  |  |  |  |
-| C3 |  |  |  |  |  |  |
+| Cue ID | Beat / Shot | Prompt Style Family | Sound Element | Purpose | Locked / Recommended / Optional | Timing Sensitivity | Prompt Note |
+|--------|-------------|---------------------|---------------|---------|---------------------------------|--------------------|-------------|
+| C1 |  |  |  |  |  |  |  |
+| C2 |  |  |  |  |  |  |  |
+| C3 |  |  |  |  |  |  |  |
 
 ## 6. Continuity Notes
 - Repeating sounds that must stay stable:
@@ -38,3 +39,5 @@
 ## 7. Handoff Notes For Prompt Generation
 - Audio details that must appear in prompts:
 - Audio details that can remain implicit:
+- Shots that should specify `No subtitles`:
+- Style-specific audio wording to reuse:

@@ -1,0 +1,20 @@
+{
+  "name": "filmography-local",
+  "interface": {
+    "displayName": "Filmography Local"
+  },
+  "plugins": [
+    {
+      "name": "filmography",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creative"
+    }
+  ]
+}
